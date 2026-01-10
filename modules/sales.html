@@ -1,0 +1,69 @@
+<div class="module">  
+  <!-- HEADER DEL MÓDULO -->
+  <div class="module-header space-between">
+    <h2>Ventas</h2>
+
+    <div class="header-actions">
+      <button class="btn" onclick="buscarVentas()">🔍 Buscar</button>
+      <button class="btn btn-primary" onclick="newSale()">➕ Nueva venta</button>
+    </div>
+  </div>
+  <!-- FILTROS -->
+  <div class="card">
+    <div class="filters-grid">
+
+      <div>
+        <label>Desde</label>
+        <input type="date" class="input" id="fechaDesde">
+      </div>
+
+      <div>
+        <label>Hasta</label>
+        <input type="date" class="input" id="fechaHasta">
+      </div>
+
+      <div class="filter-grow">
+        <label>Cliente / Documento</label>
+        <input
+          type="text"
+          class="input"
+          id="clienteFiltro"
+          placeholder="Nombre o número de documento"
+        >
+      </div>
+
+    </div>
+  </div>
+  <!-- LISTADO -->
+    <div class="card">
+        <table class="table table-fixed">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Documento</th>
+                    <th>Cliente</th>
+                    <th>Total</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="ventasBody">
+                <tr>
+                    <td>2025-01-05</td>
+                    <td>VEN-1023</td>
+                    <td>Juan Pérez</td>
+                    <td class="text-center">$120.000</td>
+                    <td class="text-center">Transmitida</td>
+                    <td>
+                        <div class="actions">
+                            <button class="icon-btn danger" title="Anular">❌</button>
+                            <button class="icon-btn" title="Ver">👁</button>
+                            <button class="icon-btn" title="Imprimir">🖨</button>
+                            <button class="icon-btn primary" title="Enviar a DIAN">📤</button>
+                        </div>
+                    </td>
+                </tr>                
+            </tbody>
+        </table>
+    </div>
+</div>

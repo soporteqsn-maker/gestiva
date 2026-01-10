@@ -1,0 +1,87 @@
+<div class="module new-sale">
+  <!-- HEADER -->
+  <div class="module-header space-between">
+    <h2>Nueva Venta</h2>
+    <button class="btn" onclick="backSales()">⬅ Volver</button>
+  </div>
+
+  <!-- CLIENTE -->
+  <div class="card">
+    <h4>Datos del Cliente</h4>
+
+    <div class="filters-grid mt-2">
+      <div class="filter-grow">
+        <label>Cliente</label>
+        <input type="text" placeholder="Buscar cliente...">
+      </div>
+
+      <div>
+        <label>Documento</label>
+        <input type="text" placeholder="Cédula / NIT">
+      </div>
+
+      <div>
+        <label>Fecha</label>
+        <input type="date">
+      </div>
+    </div>
+  </div>
+
+  <!-- DETALLE -->
+  <div class="card mt-3">
+    <div class="space-between">
+      <h4>Detalle de Productos</h4>
+      <button class="btn btn-primary">➕ Agregar producto</button>
+    </div>
+
+    <table class="table table-fixed mt-2">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Cant</th>
+          <th>Precio</th>
+          <th>Total</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+            <tr>
+                <td>Producto demo</td>
+                <td class="text-center">1</td>
+                <td class="text-center">$10.000</td>
+                <td class="text-center">$10.000</td>
+                <td>
+                    <div class="actions">
+                        <button class="icon-btn danger" title="Eliminar">🗑</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+
+  <!-- TOTALES -->
+  <div class="card mt-3">
+    <div class="filters-grid">
+      <div>
+        <label>Subtotal</label>
+        <input type="text" value="$10.000" readonly>
+      </div>
+      <div>
+        <label>IVA</label>
+        <input type="text" value="$0" readonly>
+      </div>
+      <div>
+        <label>Total</label>
+        <input type="text" value="$10.000" readonly>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACCIONES -->
+  <div class="card mt-3 text-center">
+    <button class="btn btn-primary">💾 Guardar Venta</button>
+    <button class="btn">Cancelar</button>
+  </div>
+
+</div>

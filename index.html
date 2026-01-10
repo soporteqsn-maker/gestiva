@@ -1,16 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gestiva</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/app.css">
 </head>
 <body>
+<div class="app">
+  <!-- HEADER -->
+  <header class="app-header">
+    <span class="app-title">Gestiva</span>
+    <span class="app-user">👤 Jorge</span>
+  </header>
 
-  <h1>Gestiva</h1>
-  <p>QSN Sofware&Networks</p>
+  <div class="app-body">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
 
-  <script src="assets/js/app.js"></script>
+      <div class="menu-group">
+        <div class="menu-title">Administrativo</div>
+        <div class="submenu">
+          <button onclick="loadModule('sales')">Ventas</button>
+          <button onclick="loadModule('buys')">Compras</button>
+        </div>
+      </div>
+
+      <div class="menu-group">
+        <div class="menu-title">Cartera</div>
+        <div class="submenu">
+          <button onclick="loadModule('expenses')">Egresos</button>
+          <button onclick="loadModule('billscaus')">Causación Gastos</button>
+          <button onclick="loadModule('recipts')">Recibos</button>
+          <button onclick="loadModule('crnotes')">Notas Crédito</button>
+        </div>
+      </div>
+
+      <div class="menu-group">
+        <div class="menu-title">Inventarios</div>
+        <div class="submenu">
+          <button onclick="loadModule('products')">Productos</button>
+          <button onclick="loadModule('supplies')">Insumos</button>
+          <button onclick="loadModule('iospecials')">IO Especiales</button>
+        </div>
+      </div>
+
+      <div class="menu-group">
+        <div class="menu-title">Producción</div>
+        <div class="submenu">
+          <button onclick="loadModule('lineups')">Pedidos</button>
+          <button onclick="loadModule('pxorders')">Órdenes Producción</button>
+          <button onclick="loadModule('comm')">Comandas</button>
+        </div>
+      </div>
+
+      <div class="menu-group">
+        <div class="menu-title">Informes</div>
+        <div class="submenu">
+          <button onclick="loadModule('dailyrep')">Diario</button>
+          <button onclick="loadModule('profit')">Rentabilidad</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main class="content" id="content">
+      <h2>Bienvenido a Gestiva</h2>
+      <p>Seleccione un módulo del menú</p>
+    </main>
+
+  </div>
+
+</div>
+
+<script src="assets/js/app.js"></script>
 </body>
 </html>
